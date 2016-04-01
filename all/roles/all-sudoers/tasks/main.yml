@@ -1,0 +1,4 @@
+---
+- name: Atualizando Arquivo /etc/sudoers
+  include: sudoers.yml
+  tags: all-sudoers

@@ -1,0 +1,4 @@
+---
+- name: Padronizando SNMP
+  include: snmp.yml
+  tags: all-snmp

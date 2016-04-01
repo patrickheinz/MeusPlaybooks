@@ -1,0 +1,11 @@
+---
+- name: Padronizando Servidores Centos
+  hosts: all
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - all-ntp
+    - all-password
+    - all-snmp
+    - all-sudoers
+    - all-motd

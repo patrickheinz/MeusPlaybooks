@@ -1,0 +1,4 @@
+---
+ntpservers:
+ - my.ntp.server
+ - my.ntp.server

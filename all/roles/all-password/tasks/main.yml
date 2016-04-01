@@ -1,0 +1,4 @@
+---
+- name: Atualizando senha dos servidores
+  include: passwordupdate.yml
+  tags: all-password

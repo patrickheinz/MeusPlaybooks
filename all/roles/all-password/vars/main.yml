@@ -1,0 +1,4 @@
+---
+# python -c 'import crypt; print (crypt.crypt("minhasupersenha", crypt.mksalt(crypt.METHOD_SHA512)))'
+password: $6$SofblJ.m0xVPrkKa$IlJqHrdwc635Q21Fdy2gr4MnTdNVv.O/elh5YW3MfrhDVpwuuwpkXS8AQVyWFF4kTyKU5BKHJRbjfp0T54sXV/
+user: root

@@ -1,0 +1,4 @@
+---
+- name: Padronizando NTP
+  include: ntp.yml
+  tags: all-ntp

@@ -1,0 +1,33 @@
+---
+###### CentOS 7 #####
+- name: Habilitando SNMP - CentOS 7
+  service: name=snmpd.service enabled=yes
+  service: name=snmptrapd.service enabled=yes
+  when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "7")
+
+- name: Iniciando SNMP - CentOS 7
+  service: name=snmpd.service state=restarted
+  service: name=snmptrapd.service state=restarted
+  when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "7")
+
+##### CentOS 6 ##### 
+- name: Habilitando SNMP - CentOS 6
+  service: name=snmpd enabled=yes
+  service: name=snmptrapd enabled=yes
+  when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "6")
+
+- name: Iniciando SNMP - CentOS 6
+  service: name=snmpd state=restarted
+  service: name=snmptrapd state=restarted
+  when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "6")
+
+##### CloudLinux ##### 
+- name: Habilitando SNMP - CloudLinux  
+  service: name=snmpd.service enabled=yes
+  service: name=snmptrapd.service enabled=yes
+  when: (ansible_distribution == "CloudLinux" and ansible_distribution_major_version == "7")
+
+- name: Iniciando SNMP - CloudLinux
+  service: name=snmpd.service state=restarted
+  service: name=snmptrapd.service state=restarted
+  when: (ansible_distribution == "CloudLinux" and ansible_distribution_major_version == "7")
