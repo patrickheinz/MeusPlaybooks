@@ -1,0 +1,20 @@
+---
+- name: Verificando SNMP
+  yum: pkg=net-snmp,net-snmp-utils state=latest
+  tags: all-snmp
+
+- name: Atualizando confs do snmp
+  template: src=etc/snmp/snmpd.j2 dest=/etc/snmp/snmpd.conf
+  notify: Habilitando SNMP - CentOS 7
+    - Habilitando SNMP - CentOS 7 - (1/2)
+    - Habilitando SNMP - CentOS 7 - (2/2)
+    - Iniciando SNMP - CentOS 7 - (1/2)
+    - Iniciando SNMP - CentOS 7 - (2/2)
+    - Habilitando SNMP - CentOS 6 - (1/2)
+    - Habilitando SNMP - CentOS 6 - (2/2)
+    - Iniciando SNMP - CentOS 6 - (1/2)
+    - Iniciando SNMP - CentOS 6 - (2/2)
+    - Habilitando SNMP - CloudLinux - (1/2)
+    - Habilitando SNMP - CloudLinux - (2/2)
+    - Iniciando SNMP - CloudLinux - (1/2)
+    - Iniciando SNMP - CloudLinux - (2/2)
